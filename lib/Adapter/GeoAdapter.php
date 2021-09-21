@@ -1,4 +1,9 @@
 <?php
+
+namespace Phayes\GeoPHP\Adapter;
+
+use Phayes\GeoPHP\Geometry\Geometry;
+
 /*
  * (c) Patrick Hayes 2011
  *

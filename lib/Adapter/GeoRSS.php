@@ -1,4 +1,15 @@
 <?php
+
+namespace Phayes\GeoPHP\Adapter;
+
+use DOMDocument;
+use Exception;
+use Phayes\GeoPHP\Geometry\Geometry;
+use Phayes\GeoPHP\Geometry\LineString;
+use Phayes\GeoPHP\Geometry\Point;
+use Phayes\GeoPHP\Geometry\Polygon;
+use Phayes\GeoPHP\geoPHP;
+
 /*
  * Copyright (c) Patrick Hayes
  *
@@ -56,7 +67,7 @@ class GeoRSS extends GeoAdapter
     $this->xmlobj = $xmlobj;
     try {
       $geom = $this->geomFromXML();
-    } catch(InvalidText $e) {
+    } catch(Exception $e) {
         throw new Exception("Cannot Read Geometry From GeoRSS: ". $text);
     } catch(Exception $e) {
         throw $e;
@@ -96,8 +107,8 @@ class GeoRSS extends GeoAdapter
       else {
         // It's a longitude
         $lon = $item;
-        $coords[] = new Point($lon, $lat);
       }
+      $coords[] = new Point($lon, $lat);
     }
     return $coords;
   }
@@ -196,7 +207,6 @@ class GeoRSS extends GeoAdapter
         return $this->collectionToGeoRSS($geom);
         break;
     }
-    return $output;
   }
   
   private function pointToGeoRSS($geom) {

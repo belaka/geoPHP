@@ -1,5 +1,10 @@
 <?php
 
+namespace Phayes\GeoPHP\Geometry;
+
+use Exception;
+use Phayes\GeoPHP\geoPHP;
+
 /**
  * Collection: Abstract class for compound geometries
  *

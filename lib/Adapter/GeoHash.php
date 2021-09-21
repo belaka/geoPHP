@@ -1,4 +1,7 @@
 <?php
+
+namespace Phayes\GeoPHP\Adapter;
+
 /**
  * PHP Geometry GeoHash encoder/decoder.
  *

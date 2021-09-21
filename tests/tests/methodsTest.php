@@ -1,4 +1,9 @@
 <?php
+
+namespace Phayes\GeoPHP\Tests;
+
+use Phayes\GeoPHP\geoPHP;
+
 require_once('../geoPHP.inc');
 class MethodsTests extends PHPUnit_Framework_TestCase {
 

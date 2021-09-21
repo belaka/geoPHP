@@ -1,5 +1,9 @@
 <?php
-require_once('../geoPHP.inc');
+
+namespace Phayes\GeoPHP\Tests;
+
+use Phayes\GeoPHP\geoPHP;
+
 class PlaceholdersTests extends PHPUnit_Framework_TestCase {
 
   function setUp() {

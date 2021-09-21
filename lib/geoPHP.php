@@ -1,4 +1,11 @@
 <?php
+
+namespace Phayes\GeoPHP;
+
+use Exception;
+use Phayes\GeoPHP\Geometry\Geometry;
+use Phayes\GeoPHP\Geometry\GeometryCollection;
+
 /*
  * (c) Patrick Hayes
  *
@@ -6,31 +13,6 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
-// Adapters
-include_once("lib/adapters/GeoAdapter.class.php"); // Abtract class
-include_once("lib/adapters/GeoJSON.class.php");
-include_once("lib/adapters/WKT.class.php");
-include_once("lib/adapters/EWKT.class.php");
-include_once("lib/adapters/WKB.class.php");
-include_once("lib/adapters/EWKB.class.php");
-include_once("lib/adapters/KML.class.php");
-include_once("lib/adapters/GPX.class.php");
-include_once("lib/adapters/GeoRSS.class.php");
-include_once("lib/adapters/GoogleGeocode.class.php");
-include_once("lib/adapters/GeoHash.class.php");
-
-// Geometries
-include_once("lib/geometry/Geometry.class.php"); // Abtract class
-include_once("lib/geometry/Point.class.php");
-include_once("lib/geometry/Collection.class.php"); // Abtract class
-include_once("lib/geometry/LineString.class.php");
-include_once("lib/geometry/MultiPoint.class.php");
-include_once("lib/geometry/Polygon.class.php");
-include_once("lib/geometry/MultiLineString.class.php");
-include_once("lib/geometry/MultiPolygon.class.php");
-include_once("lib/geometry/GeometryCollection.class.php");
-
 class geoPHP
 {
 
@@ -68,7 +50,7 @@ class geoPHP
     $processor_type = $type_map[$type];
 
     if (!$processor_type) {
-      throw new exception('geoPHP could not find an adapter of type '.htmlentities($type));
+      throw new Exception('geoPHP could not find an adapter of type '.htmlentities($type));
     }
 
     $processor = new $processor_type();

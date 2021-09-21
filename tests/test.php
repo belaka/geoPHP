@@ -1,6 +1,9 @@
 <?php
 
 // Uncomment to test
+
+use Phayes\GeoPHP\geoPHP;
+
 if (getenv("GEOPHP_RUN_TESTS") == 1) {
   run_test();
 }

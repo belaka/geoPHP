@@ -1,4 +1,16 @@
 <?php
+
+namespace Phayes\GeoPHP\Adapter;
+
+use DOMDocument;
+use Exception;
+use Phayes\GeoPHP\Geometry\Geometry;
+use Phayes\GeoPHP\Geometry\GeometryCollection;
+use Phayes\GeoPHP\Geometry\LineString;
+use Phayes\GeoPHP\Geometry\Point;
+use Phayes\GeoPHP\Geometry\Polygon;
+use Phayes\GeoPHP\geoPHP;
+
 /*
  * Copyright (c) Patrick Hayes
  * Copyright (c) 2010-2011, Arnaud Renevier
@@ -64,7 +76,7 @@ class KML extends GeoAdapter
     $this->xmlobj = $xmlobj;
     try {
       $geom = $this->geomFromXML();
-    } catch(InvalidText $e) {
+    } catch(Exception $e) {
         throw new Exception("Cannot Read Geometry From KML: ". $text);
     } catch(Exception $e) {
         throw $e;

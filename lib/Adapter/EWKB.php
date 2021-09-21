@@ -1,4 +1,9 @@
 <?php
+
+namespace Phayes\GeoPHP\Adapter;
+
+use Phayes\GeoPHP\Geometry\Geometry;
+
 /**
  * EWKB (Extended Well Known Binary) Adapter
  */

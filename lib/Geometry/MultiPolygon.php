@@ -1,4 +1,7 @@
 <?php
+
+namespace Phayes\GeoPHP\Geometry;
+
 /**
  * MultiPolygon: A collection of Polygons
  */

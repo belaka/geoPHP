@@ -1,4 +1,15 @@
 <?php
+
+namespace Phayes\GeoPHP\Adapter;
+
+use Exception;
+use Phayes\GeoPHP\Geometry\Geometry;
+use Phayes\GeoPHP\Geometry\LineString;
+use Phayes\GeoPHP\Geometry\MultiPoint;
+use Phayes\GeoPHP\Geometry\MultiPolygon;
+use Phayes\GeoPHP\Geometry\Point;
+use Phayes\GeoPHP\Geometry\Polygon;
+
 /*
  * (c) Camptocamp <info@camptocamp.com>
  * (c) Patrick Hayes

@@ -1,4 +1,7 @@
 <?php
+
+namespace Phayes\GeoPHP\Geometry;
+
 /**
  * MultiPoint: A collection Points  
  */

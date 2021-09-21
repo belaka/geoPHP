@@ -1,12 +1,15 @@
 <?
+
+namespace Phayes\GeoPHP\Tests;
+
+use Phayes\GeoPHP\geoPHP;
+
 // Uncomment to test
 # run_test();
 
 function run_test() {
 
   header("Content-type: text");
-  
-  include_once('../geoPHP.inc');
   
   // Your database test table should contain 3 columns: name (text), type (text), geom (geometry)
   $host =     'localhost';

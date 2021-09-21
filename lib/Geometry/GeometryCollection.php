@@ -1,4 +1,6 @@
 <?php
+
+namespace Phayes\GeoPHP\Geometry;
 /**
  * GeometryCollection: A heterogenous collection of geometries  
  */

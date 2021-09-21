@@ -1,4 +1,7 @@
 <?php
+
+namespace Phayes\GeoPHP\Geometry;
+
 /**
  * MultiLineString: A collection of LineStrings
  */

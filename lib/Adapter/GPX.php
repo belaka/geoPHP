@@ -1,4 +1,14 @@
 <?php
+
+namespace Phayes\GeoPHP\Adapter;
+
+use DOMDocument;
+use Exception;
+use Phayes\GeoPHP\Geometry\Geometry;
+use Phayes\GeoPHP\Geometry\LineString;
+use Phayes\GeoPHP\Geometry\Point;
+use Phayes\GeoPHP\geoPHP;
+
 /*
  * Copyright (c) Patrick Hayes
  *
@@ -57,7 +67,7 @@ class GPX extends GeoAdapter
     $this->xmlobj = $xmlobj;
     try {
       $geom = $this->geomFromXML();
-    } catch(InvalidText $e) {
+    } catch(Exception $e) {
         throw new Exception("Cannot Read Geometry From GPX: ". $text);
     } catch(Exception $e) {
         throw $e;
